@@ -4,7 +4,7 @@
 
 # cdk-lambda-bash
 
-Deploy Lambda container image with Bash script support in AWS CDK
+Deploy Bash Lambda Functions with AWS CDK
 
 # Why
 

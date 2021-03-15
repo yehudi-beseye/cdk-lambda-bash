@@ -1,6 +1,6 @@
 {
   "name": "cdk-lambda-bash",
-  "description": "Deploy Lambda container image with Bash script support in AWS CDK",
+  "description": "Deploy Bash Lambda Functions with AWS CDK",
   "repository": {
     "type": "git",
     "url": "https://github.com/pahud/cdk-lambda-bash.git"

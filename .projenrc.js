@@ -7,7 +7,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.93.0',
   author: 'Pahud Hsieh',
   repositoryUrl: 'https://github.com/pahud/cdk-lambda-bash.git',
-  description: 'Deploy Lambda container image with Bash script support in AWS CDK',
+  description: 'Deploy Bash Lambda Functions with AWS CDK',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'cdk-lambda-bash',
