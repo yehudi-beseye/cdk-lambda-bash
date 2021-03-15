@@ -74,14 +74,14 @@ Specify your own `Dockerfile` with the `dockerfile` property.
 ```ts
 const app = new cdk.App();
 
-    const stack = new cdk.Stack(app, 'my-stack-dev', { env: devEnv });
+const stack = new cdk.Stack(app, 'my-stack-dev', { env: devEnv });
 
-    new BashExecFunction(stack, 'Demo', {
-      script: path.join(__dirname, '../demo.sh'),
-      dockerfile: path.join(__dirname, '../Dockerfile'),
-    }).run();
+new BashExecFunction(stack, 'Demo', {
+  script: path.join(__dirname, '../demo.sh'),
+  dockerfile: path.join(__dirname, '../Dockerfile'),
+}).run();
 
-    app.synth();
+app.synth();
 ```
 
 # In Action
