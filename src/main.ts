@@ -10,6 +10,11 @@ export interface BashExecFunctionProps {
    * The path of the shell script to be executed.
    */
   readonly script: string;
+
+  /**
+   * The path of your custom dockerfile.
+   */
+  readonly dockerfile?: string;
 }
 
 export class BashExecFunction extends Construct {
@@ -17,6 +22,10 @@ export class BashExecFunction extends Construct {
   constructor(scope: Construct, id: string, props: BashExecFunctionProps) {
     super(scope, id);
 
+    if (props?.dockerfile && fs.existsSync(props?.dockerfile)) {
+      // Copy your Dockerfile to Dockerfile.custom.
+      fs.copyFileSync(props?.dockerfile, path.join(__dirname, '../docker.d/Dockerfile.custom'));
+    }
     const dockerDirPath = path.join(__dirname, '../docker.d');
     const scriptPath = props.script;
 
@@ -25,7 +34,9 @@ export class BashExecFunction extends Construct {
     fs.copyFileSync(scriptPath, mainFile);
 
     this.handler = new lambda.DockerImageFunction(this, 'BashExecFunction', {
-      code: lambda.DockerImageCode.fromImageAsset(dockerDirPath),
+      code: lambda.DockerImageCode.fromImageAsset(dockerDirPath, {
+        file: props?.dockerfile && fs.existsSync(props?.dockerfile) ? 'Dockerfile.custom': undefined,
+      }),
       timeout: Duration.seconds(60),
       logRetention: logs.RetentionDays.ONE_DAY,
     });
