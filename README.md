@@ -75,7 +75,7 @@ Specify your own `Dockerfile` with the `dockerfile` property.
 new BashExecFunction(stack, 'Demo', {
   script: path.join(__dirname, '../demo.sh'),
   dockerfile: path.join(__dirname, '../Dockerfile'),
-}).run();
+});
 ```
 
 # In Action
