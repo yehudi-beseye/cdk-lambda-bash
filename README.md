@@ -34,3 +34,11 @@ const fn = new BashExecFunction(stack, 'Demo', {
 fn.run();
 
 ```
+
+# In Action
+
+See this [tweet](https://twitter.com/pahudnet/status/1370301964836241408)
+
+![](https://pbs.twimg.com/media/EwRGRxnUcAQBng-?format=jpg&name=4096x4096)
+
+![](https://pbs.twimg.com/media/EwRKGfsUYAENjP-?format=jpg&name=4096x4096)
