@@ -24,6 +24,9 @@ const project = new AwsCdkConstructLibrary({
   bundledDeps: [
     'projen-automate-it',
   ],
+  devDeps: [
+    'xmldom',
+  ],
   publishToPypi: {
     distName: 'cdk-lambda-bash',
     module: 'cdk_lambda_bash',

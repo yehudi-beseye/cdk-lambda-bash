@@ -86,6 +86,10 @@
       "type": "build"
     },
     {
+      "name": "xmldom",
+      "type": "build"
+    },
+    {
       "name": "projen-automate-it",
       "type": "bundled"
     },
