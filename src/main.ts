@@ -20,7 +20,7 @@ export class BashExecFunction extends Construct {
     const dockerDirPath = path.join(__dirname, '../docker.d');
     const scriptPath = props.script;
 
-    // build a symbolic link so we can add the user script into the docker image
+    // copy the user script to the docker.d directory as main.sh so we can bundle it up into a new docker image
     const mainFile = path.join(dockerDirPath, '/main.sh');
     fs.copyFileSync(scriptPath, mainFile);
 
