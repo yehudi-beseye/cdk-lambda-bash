@@ -1,3 +1,7 @@
+[![NPM version](https://badge.fury.io/js/cdk-lambda-bash.svg)](https://badge.fury.io/js/cdk-lambda-bash)
+[![PyPI version](https://badge.fury.io/py/cdk-lambda-bash.svg)](https://badge.fury.io/py/cdk-lambda-bash)
+[![Build](https://github.com/pahud/cdk-lambda-bash/actions/workflows/build.yml/badge.svg)](https://github.com/pahud/cdk-lambda-bash/actions/workflows/build.yml)
+
 # cdk-lambda-bash
 
 Deploy Lambda container image with Bash script support in AWS CDK
