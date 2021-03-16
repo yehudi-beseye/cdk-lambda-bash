@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/pahud/cdk-lambda-bash/compare/v0.2.1...v0.2.2) (2021-03-16)
+
+
+### Features
+
+* support Lambda environment variables ([#11](https://github.com/pahud/cdk-lambda-bash/issues/11)) ([59a3498](https://github.com/pahud/cdk-lambda-bash/commit/59a349874a7bdd3b46da7ada43346a3c23ff88a0))
+
+
+### Bug Fixes
+
+* update snap ([#12](https://github.com/pahud/cdk-lambda-bash/issues/12)) ([8b8b3e5](https://github.com/pahud/cdk-lambda-bash/commit/8b8b3e5fb4a23795f1f4f9c18a61d672521d86a8))
+
 ### [0.2.1](https://github.com/pahud/cdk-lambda-bash/compare/v0.2.0...v0.2.1) (2021-03-15)
 
 ## [0.2.0](https://github.com/pahud/cdk-lambda-bash/compare/v0.1.2...v0.2.0) (2021-03-15)
