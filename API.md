@@ -36,6 +36,7 @@ new BashExecFunction(scope: Construct, id: string, props: BashExecFunctionProps)
 * **props** (<code>[BashExecFunctionProps](#cdk-lambda-bash-bashexecfunctionprops)</code>)  *No description*
   * **script** (<code>string</code>)  The path of the shell script to be executed. 
   * **dockerfile** (<code>string</code>)  The path of your custom dockerfile. __*Optional*__
+  * **environment** (<code>Map<string, string></code>)  Lambda environment variables. __*Optional*__
 
 
 
@@ -74,6 +75,7 @@ Name | Type | Description
 -----|------|-------------
 **script** | <code>string</code> | The path of the shell script to be executed.
 **dockerfile**? | <code>string</code> | The path of your custom dockerfile.<br/>__*Optional*__
+**environment**? | <code>Map<string, string></code> | Lambda environment variables.<br/>__*Optional*__
 
 
 

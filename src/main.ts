@@ -15,6 +15,11 @@ export interface BashExecFunctionProps {
    * The path of your custom dockerfile.
    */
   readonly dockerfile?: string;
+
+  /**
+   * Lambda environment variables
+   */
+  readonly environment?: { [key: string]: string };
 }
 
 export class BashExecFunction extends Construct {
@@ -39,6 +44,7 @@ export class BashExecFunction extends Construct {
       }),
       timeout: Duration.seconds(60),
       logRetention: logs.RetentionDays.ONE_DAY,
+      environment: props.environment,
     });
     new CfnOutput(this, 'LogGroup', { value: this.handler.logGroup.logGroupName });
   }
