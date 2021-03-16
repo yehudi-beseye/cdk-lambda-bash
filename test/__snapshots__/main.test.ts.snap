@@ -60,9 +60,14 @@ Object {
                 Object {
                   "Ref": "AWS::URLSuffix",
                 },
-                "/aws-cdk/assets:6db93e0f4e15d42677b7682abe1439f68fb5b913bf00f9fcd411799a989acad1",
+                "/aws-cdk/assets:d2bac49ea215d4b0b9b50199c1eb7d8db61fb8917e33d1769de4065adb8b8392",
               ],
             ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "FOO": "BAR",
           },
         },
         "PackageType": "Image",
@@ -174,7 +179,7 @@ Object {
             ],
           },
         },
-        "Description": "AWS CDK resource provider framework - onEvent (my-stack-dev/Demo/MyProvider)",
+        "Description": "AWS CDK resource provider framework - onEvent (lambda-bash-dev/Demo/MyProvider)",
         "Environment": Object {
           "Variables": Object {
             "USER_ON_EVENT_FUNCTION_ARN": Object {
@@ -276,7 +281,7 @@ Object {
                 Object {
                   "Ref": "AWS::URLSuffix",
                 },
-                "/aws-cdk/assets:6db93e0f4e15d42677b7682abe1439f68fb5b913bf00f9fcd411799a989acad1",
+                "/aws-cdk/assets:d2bac49ea215d4b0b9b50199c1eb7d8db61fb8917e33d1769de4065adb8b8392",
               ],
             ],
           },

@@ -13,11 +13,14 @@ export class IntegTesting {
 
     const app = new cdk.App();
 
-    const stack = new cdk.Stack(app, 'my-stack-dev', { env: devEnv });
+    const stack = new cdk.Stack(app, 'lambda-bash-dev', { env: devEnv });
 
     new BashExecFunction(stack, 'Demo', {
       script: path.join(__dirname, '../demo.sh'),
       dockerfile: path.join(__dirname, '../Dockerfile'),
+      environment: {
+        FOO: 'BAR',
+      },
     }).run();
 
     app.synth();
