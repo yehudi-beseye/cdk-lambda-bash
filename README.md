@@ -35,6 +35,16 @@ fn.run();
 
 ```
 
+## Re-execution on assets update
+
+By default, if you update your shell script or Dockerfile and re-deploy your CDK application, the `BashExecFunction`
+will not be re-executed. Use `runOnUpdate` to enable the re-execution on update.
+
+
+```ts
+fn.run({ runOnUpdate: true });
+```
+
 ## Custom Dockerfile
 In some cases, you may customize your own `Dockerfile`, for instances:
 

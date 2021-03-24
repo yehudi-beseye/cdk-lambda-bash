@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as logs from '@aws-cdk/aws-logs';
-import { CfnOutput, Construct, CustomResource, Duration } from '@aws-cdk/core';
+import { CfnOutput, Construct, CustomResource, Duration, AssetStaging } from '@aws-cdk/core';
 import * as cr from '@aws-cdk/custom-resources';
 
 export interface BashExecFunctionProps {
@@ -20,6 +20,15 @@ export interface BashExecFunctionProps {
    * Lambda environment variables
    */
   readonly environment?: { [key: string]: string };
+}
+
+export interface RunOps {
+  /**
+   * whether to run the lambda function again on the provider update
+   *
+   * @default false;
+   */
+  readonly runOnUpdate?: boolean;
 }
 
 export class BashExecFunction extends Construct {
@@ -48,7 +57,7 @@ export class BashExecFunction extends Construct {
     });
     new CfnOutput(this, 'LogGroup', { value: this.handler.logGroup.logGroupName });
   }
-  public run() {
+  public run(ops: RunOps = {}) {
     const onEvent = new lambda.DockerImageFunction(this, 'OnEventHandler', {
       code: lambda.DockerImageCode.fromImageAsset(path.join(__dirname, '../docker.d'), {
         cmd: ['function.sh.onEvent'],
@@ -61,7 +70,17 @@ export class BashExecFunction extends Construct {
     const myProvider = new cr.Provider(this, 'MyProvider', {
       onEventHandler: onEvent,
     });
-    new CustomResource(this, 'RunLambdaBash', { serviceToken: myProvider.serviceToken });
+
+    const staging = new AssetStaging(this, 'Staging', {
+      sourcePath: path.join(__dirname, '../docker.d'),
+    });
+
+    new CustomResource(this, 'RunLambdaBash', {
+      serviceToken: myProvider.serviceToken,
+      properties: {
+        assetHash: ops.runOnUpdate ? staging.assetHash : undefined,
+      },
+    });
     this.handler.grantInvoke(onEvent.grantPrincipal);
   }
 
