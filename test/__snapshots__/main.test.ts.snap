@@ -60,7 +60,7 @@ Object {
                 Object {
                   "Ref": "AWS::URLSuffix",
                 },
-                "/aws-cdk/assets:5a80d266115e6f53eecfed7985b0712dcdb59266b6a7c0825d6688e6b5f05408",
+                "/aws-cdk/assets:84e00750b916952535dc4cc5bb5454ebe14f9d0ca7d84761dfd44d36087894a3",
               ],
             ],
           },
@@ -281,7 +281,7 @@ Object {
                 Object {
                   "Ref": "AWS::URLSuffix",
                 },
-                "/aws-cdk/assets:5a80d266115e6f53eecfed7985b0712dcdb59266b6a7c0825d6688e6b5f05408",
+                "/aws-cdk/assets:84e00750b916952535dc4cc5bb5454ebe14f9d0ca7d84761dfd44d36087894a3",
               ],
             ],
           },
@@ -378,7 +378,7 @@ Object {
             "Arn",
           ],
         },
-        "assetHash": "d5e611fbe2e9fa66608504727183fb0f1ce52c354df17ffd38a7203cb62eee09",
+        "assetHash": "d14db8cb6745fe5db38519bf27be8c5d81753db709c73ac3a799756da48ac28f",
       },
       "Type": "AWS::CloudFormation::CustomResource",
       "UpdateReplacePolicy": "Delete",
