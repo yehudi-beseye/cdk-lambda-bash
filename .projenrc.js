@@ -42,11 +42,7 @@ const automation = new Automation(project, {
   automationToken: AUTOMATION_TOKEN,
 });
 
-automation.autoApprove();
-automation.autoMerge();
 automation.projenYarnUpgrade();
-automation.projenYarnUpgrade('ProjenYarnUpdateTest', { yarnTest: true });
-
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'images', 'yarn-error.log', 'dependabot.yml'];
 project.npmignore.exclude(...common_exclude);
