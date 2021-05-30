@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.18](https://github.com/pahud/cdk-lambda-bash/compare/v0.5.17...v0.5.18) (2021-05-30)
+
 ### [0.5.17](https://github.com/pahud/cdk-lambda-bash/compare/v0.5.16...v0.5.17) (2021-05-29)
 
 ### [0.5.16](https://github.com/pahud/cdk-lambda-bash/compare/v0.5.15...v0.5.16) (2021-05-28)
