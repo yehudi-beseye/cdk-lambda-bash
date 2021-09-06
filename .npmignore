@@ -27,5 +27,3 @@ cdk.context.json
 images
 yarn-error.log
 dependabot.yml
-.bin
-.tmp
