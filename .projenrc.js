@@ -17,7 +17,6 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-logs',
     '@aws-cdk/custom-resources',
   ],
-  minNodeVersion: '12.20.0',
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     ignoreProjen: false,
     workflowOptions: {
@@ -40,6 +39,11 @@ const project = new AwsCdkConstructLibrary({
     announce: false,
     twitter: 'pahudnet',
   },
+});
+
+project.package.addField('resolutions', {
+  'pac-resolver': '^5.0.0',
+  'set-value': '^4.0.1',
 });
 
 
