@@ -2042,9 +2042,9 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^3.3.69:
-  version "3.3.154"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.154.tgz#6a91db04b380020e5061c469b7537c816396950a"
-  integrity sha512-pV3jvJ7KRViN2boZc+hMQ5zDaOOK0QIXk0iCwyKIuLhzjcVIoYJS+cGZ+NhbuVyUNomjsar1BLSL76iXev7+Wg==
+  version "3.3.155"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.155.tgz#3966cd15a83bb8a736df1d8ee7467abbd1f3fecd"
+  integrity sha512-fL4Nw+EtW7a3rexuJoZcA2vrG/KhhvJy+xi33k/WzvWjgUQRFSa60r0+g14XZHaIFtAkEJxAip2ie9nHirwEgw==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -5872,10 +5872,10 @@ progress@^2.0.0, progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.28.30:
-  version "0.28.30"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.28.30.tgz#cbe1a2bc0efdb7f6e3ad313b53dde542f57b11a4"
-  integrity sha512-QvqCeKxf3/dhgAzDllpCD52JzSuskfic6kCfjG9AlXnY7Ae8f3gC7Fy4Ke4lGxzCXrHJQp/2yvQQKhGpKS938A==
+projen@^0.28.31:
+  version "0.28.31"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.28.31.tgz#1bc20ac9d0c769d1a2d1d584c36e4c6ec878a9ce"
+  integrity sha512-6zWEwI07nvHIxDqFIq3z5r7C5uLH1hJOTDjEDUJtr8fEal1f6dN9f9hHCGdGjUaySWgqa0ssNEGMOED1Evu8eg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.2"
