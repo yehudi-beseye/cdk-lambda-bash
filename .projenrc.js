@@ -4,7 +4,6 @@ const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
 const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.93.0',
-  minNodeVersion: '12.20.0',
   author: 'Pahud Hsieh',
   repositoryUrl: 'https://github.com/pahud/cdk-lambda-bash.git',
   description: 'Deploy Bash Lambda Functions with AWS CDK',
