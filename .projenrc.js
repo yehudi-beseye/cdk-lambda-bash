@@ -1,8 +1,8 @@
-const { AwsCdkConstructLibrary, DevEnvironmentDockerImage, Gitpod } = require('projen');
+const { awscdk, DevEnvironmentDockerImage, Gitpod } = require('projen');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
-const project = new AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '1.93.0',
   author: 'Pahud Hsieh',
   repositoryUrl: 'https://github.com/pahud/cdk-lambda-bash.git',
