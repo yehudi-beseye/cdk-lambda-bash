@@ -18,6 +18,21 @@ At this moment, we are offering `BashExecFunction` construct class which is a hi
 If you `fn.run()`, a custom resource will be created and the `lambda.DockerImageFunction` will be executed on deployment.
 
 
+# Install
+
+Use the npm dist tag to opt in CDKv1 or CDKv2:
+
+```sh
+// for CDKv2
+npm install cdk-lambda-bash
+or
+npm install cdk-lambda-bash@latest
+
+// for CDKv1
+npm install cdk-lambda-bash@cdkv1 
+```
+
+
 # Sample
 
 ```ts
