@@ -20,8 +20,8 @@ Name|Description
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [Construct](#aws-cdk-core-construct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
+__Extends__: [Construct](#constructs-construct)
 
 ### Initializer
 
@@ -32,14 +32,14 @@ __Extends__: [Construct](#aws-cdk-core-construct)
 new BashExecFunction(scope: Construct, id: string, props: BashExecFunctionProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[BashExecFunctionProps](#cdk-lambda-bash-bashexecfunctionprops)</code>)  *No description*
   * **script** (<code>string</code>)  The path of the shell script to be executed. 
   * **dockerfile** (<code>string</code>)  The path of your custom dockerfile. __*Optional*__
   * **environment** (<code>Map<string, string></code>)  Lambda environment variables. __*Optional*__
-  * **role** (<code>[IRole](#aws-cdk-aws-iam-irole)</code>)  Custom lambda execution role. __*Default*__: auto generated role.
-  * **timeout** (<code>[Duration](#aws-cdk-core-duration)</code>)  The function execution time (in seconds) after which Lambda terminates the function. __*Default*__: Duration.seconds(60)
+  * **role** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  Custom lambda execution role. __*Default*__: auto generated role.
+  * **timeout** (<code>[Duration](#aws-cdk-lib-duration)</code>)  The function execution time (in seconds) after which Lambda terminates the function. __*Default*__: Duration.seconds(60)
 
 
 
@@ -48,7 +48,7 @@ new BashExecFunction(scope: Construct, id: string, props: BashExecFunctionProps)
 
 Name | Type | Description 
 -----|------|-------------
-**handler** | <code>[DockerImageFunction](#aws-cdk-aws-lambda-dockerimagefunction)</code> | <span></span>
+**handler** | <code>[aws_lambda.DockerImageFunction](#aws-cdk-lib-aws-lambda-dockerimagefunction)</code> | <span></span>
 
 ### Methods
 
@@ -65,7 +65,7 @@ run(ops?: RunOps): CustomResource
   * **runOnUpdate** (<code>boolean</code>)  whether to run the lambda function again on the provider update. __*Default*__: false;
 
 __Returns__:
-* <code>[CustomResource](#aws-cdk-core-customresource)</code>
+* <code>[CustomResource](#aws-cdk-lib-customresource)</code>
 
 
 
@@ -81,8 +81,8 @@ Name | Type | Description
 **script** | <code>string</code> | The path of the shell script to be executed.
 **dockerfile**? | <code>string</code> | The path of your custom dockerfile.<br/>__*Optional*__
 **environment**? | <code>Map<string, string></code> | Lambda environment variables.<br/>__*Optional*__
-**role**? | <code>[IRole](#aws-cdk-aws-iam-irole)</code> | Custom lambda execution role.<br/>__*Default*__: auto generated role.
-**timeout**? | <code>[Duration](#aws-cdk-core-duration)</code> | The function execution time (in seconds) after which Lambda terminates the function.<br/>__*Default*__: Duration.seconds(60)
+**role**? | <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code> | Custom lambda execution role.<br/>__*Default*__: auto generated role.
+**timeout**? | <code>[Duration](#aws-cdk-lib-duration)</code> | The function execution time (in seconds) after which Lambda terminates the function.<br/>__*Default*__: Duration.seconds(60)
 
 
 

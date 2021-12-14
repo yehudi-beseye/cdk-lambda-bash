@@ -1,25 +1,27 @@
 import * as path from 'path';
-import * as iam from '@aws-cdk/aws-iam';
-import * as cdk from '@aws-cdk/core';
+import {
+  App, Stack, Duration,
+  aws_iam as iam,
+} from 'aws-cdk-lib';
 import { BashExecFunction } from '.';
 
 
 export class IntegTesting {
-  readonly stack: cdk.Stack[];
+  readonly stack: Stack[];
   constructor() {
     const devEnv = {
       account: process.env.CDK_DEFAULT_ACCOUNT,
       region: process.env.CDK_DEFAULT_REGION,
     };
 
-    const app = new cdk.App();
+    const app = new App();
 
-    const stack = new cdk.Stack(app, 'lambda-bash-dev', { env: devEnv });
+    const stack = new Stack(app, 'lambda-bash-dev', { env: devEnv });
 
     const fn = new BashExecFunction(stack, 'Demo', {
       script: path.join(__dirname, '../demo.sh'),
       dockerfile: path.join(__dirname, '../Dockerfile'),
-      timeout: cdk.Duration.minutes(2),
+      timeout: Duration.minutes(2),
       environment: {
         FOO: 'BAR',
       },
@@ -33,16 +35,16 @@ export class IntegTesting {
 }
 
 export class IntegTestingCustomRole {
-  readonly stack: cdk.Stack[];
+  readonly stack: Stack[];
   constructor() {
     const devEnv = {
       account: process.env.CDK_DEFAULT_ACCOUNT,
       region: process.env.CDK_DEFAULT_REGION,
     };
 
-    const app = new cdk.App();
+    const app = new App();
 
-    const stack = new cdk.Stack(app, 'lambda-bash-dev', { env: devEnv });
+    const stack = new Stack(app, 'lambda-bash-dev', { env: devEnv });
 
     const role = new iam.Role(stack, 'CustomRole', {
       assumedBy: new iam.ServicePrincipal('lambda.amazonaws.com'),
@@ -55,7 +57,7 @@ export class IntegTestingCustomRole {
     const fn = new BashExecFunction(stack, 'Demo', {
       script: path.join(__dirname, '../demo-custom-role.sh'),
       dockerfile: path.join(__dirname, '../Dockerfile'),
-      timeout: cdk.Duration.minutes(2),
+      timeout: Duration.minutes(2),
       role,
     });
 
