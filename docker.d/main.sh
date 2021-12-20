@@ -18,7 +18,7 @@ function getRequestType() {
 }
 
 function conditionalExec() {
-  requestType=$(getRequestType $EVENT_DATA)
+  requestType=$(getRequestType "$EVENT_DATA")
 
   # determine the original request type
   case $requestType in
