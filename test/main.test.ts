@@ -25,7 +25,7 @@ test('re-execution on assets update', () => {
   }).run({ runOnUpdate: true });
   const t = Template.fromStack(stack);
   t.hasResourceProperties('Custom::RunLambdaBash', {
-    assetHash: 'd14db8cb6745fe5db38519bf27be8c5d81753db709c73ac3a799756da48ac28f',
+    assetHash: '9ddb8373fd34c96b5b86bd0d72e8fc9e3642733fbb4bf6d84f5c12461a9c71aa',
   });
 });
 

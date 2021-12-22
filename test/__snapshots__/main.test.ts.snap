@@ -27,7 +27,7 @@ Object {
       "Properties": Object {
         "Code": Object {
           "ImageUri": Object {
-            "Fn::Sub": "\${AWS::AccountId}.dkr.ecr.\${AWS::Region}.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-\${AWS::AccountId}-\${AWS::Region}:1403a2ceb93850aa78438a6eea9bdd48379dd61056d616bb88a2400101d7c402",
+            "Fn::Sub": "\${AWS::AccountId}.dkr.ecr.\${AWS::Region}.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-\${AWS::AccountId}-\${AWS::Region}:c0afe9769c244fad44491937969e647fe3596cbcbfbf4ce26da9136be2868312",
           },
         },
         "Environment": Object {
@@ -200,7 +200,7 @@ Object {
       "Properties": Object {
         "Code": Object {
           "ImageUri": Object {
-            "Fn::Sub": "\${AWS::AccountId}.dkr.ecr.\${AWS::Region}.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-\${AWS::AccountId}-\${AWS::Region}:1403a2ceb93850aa78438a6eea9bdd48379dd61056d616bb88a2400101d7c402",
+            "Fn::Sub": "\${AWS::AccountId}.dkr.ecr.\${AWS::Region}.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-\${AWS::AccountId}-\${AWS::Region}:c0afe9769c244fad44491937969e647fe3596cbcbfbf4ce26da9136be2868312",
           },
         },
         "Environment": Object {
@@ -295,7 +295,7 @@ Object {
             "Arn",
           ],
         },
-        "assetHash": "d14db8cb6745fe5db38519bf27be8c5d81753db709c73ac3a799756da48ac28f",
+        "assetHash": "9ddb8373fd34c96b5b86bd0d72e8fc9e3642733fbb4bf6d84f5c12461a9c71aa",
       },
       "Type": "Custom::RunLambdaBash",
       "UpdateReplacePolicy": "Delete",
